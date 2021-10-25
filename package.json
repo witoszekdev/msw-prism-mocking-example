@@ -34,5 +34,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@stoplight/prism-cli": "^4.5.0",
+    "@stoplight/prism-http": "^4.5.0",
+    "msw": "^0.35.0",
+    "pino": "^7.0.4"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
