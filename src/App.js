@@ -9,7 +9,6 @@ function App() {
     return async () => {
       try {
         const res = await fetch(url);
-        console.log(res);
         const json = await res.json();
         setResponse(json);
         setError(res.statusText);

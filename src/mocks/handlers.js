@@ -33,7 +33,6 @@ const openApiHandler = async (req, res, ctx) => {
   )();
 
   if (result.left) {
-    console.log("err", result.left);
     const response = result.left;
     return res(
       ctx.status(response.status),
@@ -45,7 +44,6 @@ const openApiHandler = async (req, res, ctx) => {
   }
 
   if (result.right) {
-    console.log("ok", result.right);
     const response = result.right.output;
     return res((res) => {
       res.status = response.statusCode;
