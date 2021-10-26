@@ -27,8 +27,12 @@ function App() {
       <button onClick={requestHandler("http://api.dev/users/123/123")}>
         Make bad request
       </button>
-      {response && <pre>{JSON.stringify(response, null, 2)}</pre>}
-      {error && <p>Error: {error}</p>}
+      {response && (
+        <pre data-testid="api-response">
+          {JSON.stringify(response, null, 2)}
+        </pre>
+      )}
+      {error && <p data-testid="error-message">Error: {error}</p>}
     </div>
   );
 }
